@@ -1,0 +1,22 @@
+@import 'fonts';
+@import 'vars';
+@import 'global';
+
+// About start
+.about__name {
+  // font-family: Bebas Neue;
+  // font-weight: bold;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: 23px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.about__info {
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 60px;
+}
+// About end
+
+@import 'media';

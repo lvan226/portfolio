@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+}
+body {
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark;
+}
+.wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+.menu {
+  max-width: 400px;
+  width: 100%;
+  background-color: $dark;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.container {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container__top,
+.container__main {
+  width: 100%;
+  border: 1px solid #000;
+}
+.sidebar {
+  margin-left: auto;
+  max-width: 400px;
+  width: 100%;
+}
+.section {
+  padding-left: 400px;
+}
+span, a, li {
+  display: inline-block;
+}
+h1,h2 {
+  margin: 0;
+}
