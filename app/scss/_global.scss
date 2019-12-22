@@ -14,46 +14,59 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: $dark;
-}
-.wrap {
-  max-width: 1920px;
-  margin: 0 auto;
-  display: flex;
-  position: relative;
-}
-.menu {
-  max-width: 400px;
-  width: 100%;
-  background-color: $dark;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-.container {
-  max-width: 940px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-.container__top,
-.container__main {
-  width: 100%;
-  border: 1px solid #000;
-}
-.sidebar {
-  margin-left: auto;
-  max-width: 400px;
-  width: 100%;
-}
-.section {
-  padding-left: 400px;
+  @include av400;
 }
 span, a, li {
   display: inline-block;
 }
-h1,h2 {
+h1,h2,h3,p {
   margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  max-width: 940px;
+  width: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  // border: 1px solid #000;
+}
+.container__top,
+.container__main {
+  width: 100%;
+}
+.container__top {
+  display: flex;
+  margin-bottom: 80px;
+}
+.section {
+  padding-left: 400px;
+}
+.section-inner {
+  display: flex;
+  // justify-content: space-between;
+}
+.language {
+  letter-spacing: 5px;
+  color: $dark;
+  font-size: 24px;
+  @include b700;
+  text-transform: uppercase;
+  margin-left: auto;
+}
+// .language-rus {
+//   cursor: pointer;
+// }
+.language-eng {
+  cursor: pointer;
+  color: #C4C4C4;
 }

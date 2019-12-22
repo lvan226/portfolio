@@ -2,6 +2,142 @@
 @import 'vars';
 @import 'global';
 
+// Menu start
+.menu {
+  max-width: 400px;
+  width: 100%;
+  height: 50%;
+  background-color: $dark;
+  position: absolute;
+  left: 0;
+  top: 0;
+  // right: 0;
+  // bottom: 0;
+  display: flex;
+  color: #fff;
+  padding: 50px 0px 50px 60px;
+  @include b400;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__top {
+  width: 100%;
+}
+.menu__list {
+  li {
+    display: block;
+    position: relative;
+    transition: .6s;
+    line-height: 18px;
+    &.active {
+      padding-left: 12px;
+      &::before {
+        transform: scale(1, 1);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      height: 13px;
+      width: 2px;
+      background-color: #fff;
+      transition: .6s;
+      transform: scale(1, 0);
+    }
+  }
+  a {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.menu__main {
+  img {
+    display: block;
+    &+ img {
+      margin-top: 30px;
+    }
+  }
+}
+.menu__bottom h2 {
+  font-size: 72px;
+  line-height: 72px;
+  margin-bottom: 10px;
+  letter-spacing: 6px;
+  @include book;
+}
+.menu__bottom span {
+  color: #36444F;
+  font-size: 30px;
+  line-height: 30px;
+  @include av400;
+}
+// Menu end
+
+// Sidebar start
+.sidebar {
+  margin-left: auto;
+  max-width: 264px;
+  padding-right: 40px;
+  width: 100%;
+  // flex-basis: 324px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  // border: 1px solid #000;
+  position: relative;
+}
+.sidebar__letter,
+.sidebar__portfolio {
+  position: relative;
+  padding-left: 170px;
+  overflow: hidden;
+  // transform: translateY(-50%);
+  cursor: pointer;
+  span {
+    @include b400;
+    font-size: 14px;
+    letter-spacing: 3px;
+    position: absolute;
+    width: 170px;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-65%);
+    transition: .5s;
+    left: 100%;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 10;
+  }
+  &:hover {
+    span {
+      left: 0;
+      opacity: 1;
+    }
+  }
+}
+.sidebar__phone {
+  color: #A5A5A5;
+  font-size: 24px;
+  letter-spacing: 5px;
+  width: 380px;
+  color: #A5A5A5;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: rotate(90deg) translateY(-50%);
+  left: 0px;
+}
+// Sidebar end
+
 // About start
 .about__name {
   // font-family: Bebas Neue;
@@ -10,13 +146,62 @@
   line-height: 72px;
   letter-spacing: 23px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
+  @include b700;
 }
 .about__info {
   font-size: 48px;
   line-height: 48px;
   margin-bottom: 60px;
 }
+.about__text {
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 660px;
+  color: $text;
+}
+.about__skills {
+  margin-top: 110px;
+}
+.about__skills-title {
+  @include b700;
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  padding-left: 12px;
+  position: relative;
+  margin-left: 75px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: $dark;
+  }
+}
+.about__skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 870px;
+}
+.about__skills-list li {
+  width: 33.3333%;
+  color: #000;
+  font-size: 24px;
+  line-height: 30px;
+  @include av500;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.about__skills-list li img {
+  float: left;
+  margin-right: 15px;
+  width: 39px;
+  height: 40px;
+}
+
 // About end
 
 @import 'media';

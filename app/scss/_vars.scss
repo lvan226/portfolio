@@ -6,3 +6,27 @@ $text: #12204D;
   font-family: 'Avenir Next Cyr';
   font-weight: 400;
 }
+@mixin av500 {
+  font-family: 'Avenir Next Cyr';
+  font-weight: 500;
+}
+@mixin av700 {
+  font-family: 'Avenir Next Cyr';
+  font-weight: 700;
+}
+@mixin b400 {
+  font-family: 'Bebas Neue';
+  font-weight: 400;
+}
+@mixin b500 {
+  font-family: 'Bebas Neue';
+  font-weight: 500;
+}
+@mixin b700 {
+  font-family: 'Bebas Neue';
+  font-weight: 700;
+}
+@mixin book{
+  font-family: 'Bebas Neue Book';
+  font-weight: 400;
+}
