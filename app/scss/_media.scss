@@ -29,6 +29,15 @@
       height: 2px;
       background-color: #fff;
       margin-bottom: 5px;
+      transition: .7s;
+    }
+    &.active {
+      span {
+        transform: translateY(2.5px) rotate(-225deg);
+      }
+      span + span {
+        transform: translateY(-4.5px) rotate(225deg);
+      }
     }
   }
   .menu-message {
@@ -122,34 +131,40 @@
       @include b400;
     }
   }
-  .language {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+  .menu__min {
+    .language {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   .menu__min .language-rus {
     color: #fff;
   }
   // Menu end
+
+  // About start
+  .about__name {
+    letter-spacing: 15px;
+  }
+  // About end
+
+  // Sidebar start
+  .sidebar__letter,
+  .sidebar__phone  {
+    display: none;
+  }
+  // Sidebar end
+  .language-main {
+    display: none;
+  }
 }
 @media (max-width: 1280px) {
   .about__inner {
     padding-left: 15px;
   }
 }
-@media (min-width: 1651px) {
-  .menu-burger {
-    display: none;
-  }
-  .menu-message {
-    display: none;
-  }
-  .menu__min {
-    display: none;
-  }
-}
-
 @media (max-height: 1023px) {
   .container__top {
     margin-bottom: 20px;
@@ -177,5 +192,86 @@
   }
   .about__skills {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .fp-tableCell {
+    vertical-align: top;
+  }
+  .about .container {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+  .about__inner {
+    position: relative;
+    height: calc(100% - 68px);
+  }
+  .about__skills {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .about__skills-title {
+    margin-left: 0;
+    padding-left: 0;
+    text-align: center;
+    color: #fff;
+    background-color: $dark;
+    &::before {
+      display: none;
+      background-color: $dark;
+    }
+  }
+  .about__text {
+    margin: 0;
+  }
+  .about__skills-list {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .about__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .about__name {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+  .about__info {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  .about__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .about__skills-title {
+    font-size: 14px;
+    line-height: 14px;
+    @include b400;
+    padding: 9px 0px;
+    letter-spacing: 2px;
+    border-radius: 10px 10px 0px 0px;
+  }
+}
+@media (min-width: 1651px) {
+  .menu-burger {
+    display: none;
+  }
+  .menu-message {
+    display: none;
+  }
+  .menu__min {
+    display: none;
   }
 }
