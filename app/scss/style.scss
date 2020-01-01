@@ -76,6 +76,7 @@
   line-height: 30px;
   @include av400;
 }
+
 // Menu end
 
 // Sidebar start
@@ -203,5 +204,111 @@
 }
 
 // About end
+
+// Works start
+.works .container {
+  padding-right: 20px;
+  max-width: 960px;
+}
+.works__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 660px;
+  margin-right: -20px;
+  text-align: center;
+}
+.works__list-small,
+.works__list-middle,
+.works__list-large {
+  height: 320px;
+  background: #C4C4C4;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 20px 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  position: relative;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#061D2B, 0.8);
+    opacity: 0;
+    transition: .76s;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+    .works__list-title,
+    .works__list-subtitle,
+    .works__list-link {
+      opacity: 1;
+    }
+  }
+}
+.works__list-title,
+.works__list-subtitle,
+.works__list-link {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: .76s;
+}
+.works__list-small {
+  max-width: 220px;
+  margin-right: 20px;
+}
+.works__list-middle {
+  max-width: 460px;
+}
+.works__list-large {
+  max-width: 700px;
+  margin-right: 20px;
+}
+.works__list-title {
+  letter-spacing: 1px;
+  @include b400;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 12px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.works__list-subtitle {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 40px;
+  color: #C4C4C4;
+}
+.works__list-link {
+  padding-bottom: 12px;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  @include b400;
+  letter-spacing: 1px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 3px;
+    width: 30px;
+
+  }
+}
+// Works end
 
 @import 'media';

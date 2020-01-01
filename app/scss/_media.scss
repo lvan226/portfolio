@@ -7,7 +7,7 @@
     margin: 0;
     position: relative;
     padding: 0;
-    height: auto;
+    height: 68px;
     max-width: 100%;
     flex-direction: row;
     padding: 15px 25px;
@@ -45,6 +45,9 @@
     order: 1;
     position: relative;
     z-index: 30;
+    max-width: 30px;
+    width: 100%;
+    height: 30px;
     img {
       width: 30px;
       height: 30px;
@@ -165,6 +168,14 @@
     padding-left: 15px;
   }
 }
+@media (max-width: 1279px) {
+  .works__list-small,
+  .works__list-middle,
+  .works__list-large {
+    max-width: 30%;
+    margin-right: 20px;
+  }
+}
 @media (max-height: 1023px) {
   .container__top {
     margin-bottom: 20px;
@@ -180,6 +191,19 @@
   }
   .about__skills-title {
     margin-bottom: 0;
+  }
+}
+@media (max-height: 860px) {
+  .works__list-small,
+  .works__list-middle,
+  .works__list-large {
+    height: 270px;
+  }
+  .works,
+  .about {
+    .fp-tableCell {
+      vertical-align: top;
+    }
   }
 }
 
@@ -218,11 +242,18 @@
     padding: 0;
   }
   .about__skills-title {
-    margin-left: 0;
-    padding-left: 0;
+    font-size: 20px;
+    line-height: 20px;
+    @include b400;
+    padding: 9px 0px;
+    letter-spacing: 2px;
     text-align: center;
     color: #fff;
+    border-radius: 10px 10px 0px 0px;
     background-color: $dark;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
     &::before {
       display: none;
       background-color: $dark;
@@ -234,6 +265,32 @@
   .about__skills-list {
     display: none;
   }
+}
+@media (max-width: 767px) {
+  .works__list-small,
+  .works__list-middle,
+  .works__list-large { 
+    height: 170px;
+    width: 288px;
+    max-width: 100%;
+    padding: 20px 7px;
+    &::before {
+      opacity: 1;
+    }
+  }
+  .works__list-title {
+    opacity: 1;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .works__list-subtitle {
+    font-size: 14px;
+    opacity: 1;
+  }
+  .works__list-link {
+    opacity: 1;
+  }
+
 }
 @media (max-width: 600px) {
   .about__inner {
@@ -253,15 +310,7 @@
   }
   .about__text {
     font-size: 14px;
-    line-height: 18px;
-  }
-  .about__skills-title {
-    font-size: 14px;
-    line-height: 14px;
-    @include b400;
-    padding: 9px 0px;
-    letter-spacing: 2px;
-    border-radius: 10px 10px 0px 0px;
+    line-height: 20px;
   }
 }
 @media (min-width: 1651px) {
