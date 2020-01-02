@@ -271,8 +271,8 @@
   .works__list-middle,
   .works__list-large { 
     height: 170px;
-    width: 288px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 288px;
     padding: 20px 7px;
     &::before {
       opacity: 1;
