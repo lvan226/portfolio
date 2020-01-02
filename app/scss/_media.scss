@@ -262,8 +262,41 @@
   .about__text {
     margin: 0;
   }
-  .about__skills-list {
+  .about__skills {
+    background-color: $dark;
+    border-radius: 10px 10px 0px 0px;
+
+  }
+  .about__skills-list li img {
     display: none;
+  }
+  .about__skills-list {
+    transition: .3s;
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 0px;
+    padding: 0;
+    transition: .7s;
+    li {
+      margin: 0;
+      color: #fff;
+      margin-bottom: 15px;
+      width: 50%;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  .about__skills.active {
+    .about__skills-list {
+      padding: 10px 12px;
+      max-height: 200px;
+    }
+    .about__skills-list li {
+     
+    }
   }
 }
 @media (max-width: 767px) {
