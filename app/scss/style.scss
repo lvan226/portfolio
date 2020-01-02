@@ -311,4 +311,52 @@
 }
 // Works end
 
+// Services start
+.services__inner {
+  display: flex;
+}
+.services__title {
+  color: $dark;
+  @include b700;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: .7s;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 0px;
+    top: 7px;
+    background-color: $dark;
+    transition: .5s;
+  }
+}
+.services__text {
+  color: $text;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  @include av500;
+  transition: .5s;
+  max-width: 750px;
+}
+.services__item.active {
+  .services__title {
+    padding-left: 30px;
+    &::before {
+      height: 30px;
+    }
+  }
+  .services__text {
+    max-height: 300px;
+    padding-bottom: 40px;
+  }
+}
+// Services end
+
 @import 'media';

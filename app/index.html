@@ -28,7 +28,7 @@
         <ul class="menu__list" id="menu">
           <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Обо мне</a></li>
           <li data-menuanchor="secondPage"><a href="#secondPage">Портфолио</a></li>
-          <li><a href="#">Услуги</a></li>
+          <li data-menuanchor="thirdPage"><a href="#thirdPage">Услуги</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <div class="menu__min" id="menu-min">
@@ -39,7 +39,7 @@
           <ul>
             <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Обо мне</a></li>
             <li data-menuanchor="secondPage"><a href="#secondPage">Портфолио</a></li>
-            <li><a href="#">Услуги</a></li>
+            <li data-menuanchor="thirdPage"><a href="#thirdPage">Услуги</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
         </div>
@@ -229,11 +229,83 @@
       <!-- Мои работы конец -->
 
       <!-- Услуги начало -->
-      <section class="services">
+      <section class="services section">
+       <div class="services__inner about__inner">
         <div class="container">
-
+          <div class="container__top">
+            <div class="language language-main">
+              <span class="language-rus">RUS</span>
+              <span class="language-eng">ENG</span>
+            </div>
+          </div>
+          <!-- /.container__top -->
+          <div class="container__main">
+            <div class="about__content">
+              <div class="services__item active">
+                <div class="services__title">
+                  Дизайн сайта
+                </div>
+                <p class="services__text">
+                  Дизайн-макет сайта – это визуальный образ будущего сайта, разработанный с учетом технических возможностей HTML верстки.
+                  Такой макет является демонстрацией того, как визуально будет выглядеть ваш сайт после верстки и наполнения.
+                </p>
+              </div>
+              <!-- /.services__item -->
+              <div class="services__item">
+                <div class="services__title">
+                  Вёрстка сайта
+                </div>
+                <p class="services__text">
+                  Конечный этап разработки дизайна сайта, создание структуры сайта, которая будет определять отображение текста и графики на сайте в различных браузерах.
+                </p>
+              </div>
+              <!-- /.services__item -->
+              <div class="services__item">
+                <div class="services__title">
+                  Установка админ панели
+                </div>
+                <p class="services__text">
+                  Установка на сайт админ панели Wordpress для удобного взаимодействия с сайтом. Админка на сайте позволяет изменять, добавлять и удалять контент на вашем сайте.
+                </p>
+              </div>
+              <!-- /.services__item -->
+              <div class="services__item">
+                <div class="services__title">
+                  Сайт под ключ
+                </div>
+                <p class="services__text">
+                  Полностью функционирующий веб-ресурс со всеми необходимыми для работы сайта составляющими. Включает в себя создание дизайна, верстку сайта и установку админ панели (опционально).
+                </p>
+              </div>
+              <!-- /.services__item -->
+            </div>
+          </div>
+          <!-- /.container__main -->
         </div>
         <!-- /.container -->
+        <div class="sidebar">
+          <div class="sidebar__top">
+            <div class="sidebar__letter">
+              <span>Написать сообщение</span>
+              <img src="images/letter.png" alt="">
+            </div>
+          </div>
+          <!-- /.sidebar__top -->
+          <div class="sidebar__main">
+            <a class="sidebar__phone" href="tel:+79149062018">+ 7 (914) 906-20-18</a>
+          </div>
+          <!-- /.sidebar__main -->
+          <div class="sidebar__bottom">
+            <div class="sidebar__portfolio">
+              <span>Смотреть портфолио</span>
+              <img src="images/arrow-right.png" alt="">
+            </div>
+          </div>
+          <!-- /.sidebar__bottom -->
+        </div>
+        <!-- /.sidebar -->
+       </div>
+       <!-- /.services__inner -->
       </section>
       <!-- Услуги конец -->
     </div>
