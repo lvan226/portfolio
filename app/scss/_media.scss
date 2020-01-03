@@ -175,6 +175,16 @@
     max-width: 30%;
     margin-right: 20px;
   }
+  .sidebar-contact {
+    max-width: 400px;
+    &.active {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+  .contact .sidebar {
+    max-width: 400px;
+  }
 }
 @media (max-height: 1023px) {
   .container__top {
@@ -205,6 +215,32 @@
       vertical-align: top;
     }
   }
+  .contact__info h3 {
+    margin-bottom: 20px;
+  }
+  .contact__info-steps {
+    margin-top: 35px;
+  }
+  .contact__info-list {
+    line-height: 20px;
+    li {
+      margin-bottom: 9px;
+    }
+  }
+  .sidebar-contact__title {
+    margin-bottom: 55px;
+  }
+  .form textarea {
+    height: 150px;
+  }
+  .sidebar-contact.active {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  .sidebar-contact .close {
+    top: 25px;
+    right: 25px;
+  }
 }
 
 @media (max-height: 768px) {
@@ -218,7 +254,44 @@
     margin-top: 30px;
   }
 }
-
+@media (max-width: 1023px) {
+  .contact .sidebar {
+    max-width: 0;
+  }
+  .sidebar-contact.active {
+    max-width: 100%;
+  }
+  .form input, .form textarea {
+    max-width: 420px;
+    margin-bottom: 15px;
+  }
+  .sidebar-contact__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .sidebar-contact.active {
+    padding: 10px 25px;
+    padding-top: 50px;
+  }
+  .form {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .form input {
+    height: 40px;
+    padding: 6px 7px 4px;
+  }
+  .form textarea {
+    height: 120px;
+    padding: 6px 7px 4px;
+  }
+  .sidebar-contact .close {
+    top: 15px;
+    right: 15px;
+  }
+}
 @media (max-width: 960px) {
   .fp-tableCell {
     vertical-align: top;
@@ -344,6 +417,15 @@
       padding-bottom: 20px;
     }
   }
+  .contact__info h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .contact__info-phone a,
+  .contact__info-email a {
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
 @media (max-width: 600px) {
   .about__inner {
@@ -364,6 +446,33 @@
   .about__text {
     font-size: 14px;
     line-height: 20px;
+  }
+  .contact__info-list li {
+    margin-bottom: 7px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .contact__info h3 {
+    margin-bottom: 10px;
+  }
+  .contact__info-steps {
+    margin-top: 20px;
+  }
+  .sidebar-contact .close {
+    width: 20px;
+    height: 20px;
+  }
+  .sidebar-contact .close span {
+    width: 16px;
+    height: 1.1px;
+  }
+  .contact__info-phone a,
+  .contact__info-email a {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .contact__info {
+    padding: 0 10px;
   }
 }
 @media (min-width: 1651px) {
